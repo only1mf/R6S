@@ -1,4 +1,4 @@
-local ESP_ENABLED = false
+local ESP_ENABLED = true
 local Players = game:GetService("Players")
 local Camera = game:GetService("Workspace").CurrentCamera
 local RunService = game:GetService("RunService")
