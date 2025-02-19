@@ -32,12 +32,12 @@ local config = {
     }
 }
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/only1mf/Lua-Gui/refs/heads/main/lib.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/only1mf/R6S/refs/heads/main/lib.lua"))()
 
 -- local aimbot = loadstring(game:HttpGet("https://raw.githubusercontent.com/only1mf/Lua-Gui/refs/heads/main/logic/aimbot.lua"))()
 -- local silent = loadstring(game:HttpGet("https://raw.githubusercontent.com/only1mf/Lua-Gui/refs/heads/main/logic/silent.lua"))()
-local esp = loadstring(game:HttpGet("https://raw.githubusercontent.com/only1mf/Lua-Gui/refs/heads/main/logic/esp.lua"))()
-local outline = loadstring(game:HttpGet("https://raw.githubusercontent.com/only1mf/Lua-Gui/refs/heads/main/logic/outline.lua"))()
+local esp = loadstring(game:HttpGet("https://raw.githubusercontent.com/only1mf/R6S/refs/heads/main/logic/esp.lua"))()
+local outline = loadstring(game:HttpGet("https://raw.githubusercontent.com/only1mf/R6S/refs/heads/main/logic/outline.lua"))()
 
 local window = library:CreateWindow({
     WindowName = "Normality.cc - v1.0.0",
