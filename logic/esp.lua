@@ -1,13 +1,17 @@
 -- esp.lua
 
-local esp_enabled = false
+local esp = {}
 
 -- Function to enable ESP
-function esp_enable()
-    if esp_enabled then return end
-    esp_enabled = true
+function esp.esp_enable()
+    -- Check if ESP is already enabled
+    if esp.enabled then return end
+    esp.enabled = true
 
-    -- Example of adding ESP: Add labels or indicators here
+    -- Add your ESP logic here
+    print("ESP Enabled")
+
+    -- Example: Create ESP for players (you can add your own ESP logic here)
     for _, player in pairs(game.Players:GetPlayers()) do
         if player.Character and player.Character:FindFirstChild("Head") then
             local label = Instance.new("BillboardGui")
@@ -25,7 +29,7 @@ function esp_enable()
         end
     end
 
-    -- You could also hook into events to handle player joins or character respawn
+    -- Hook into PlayerAdded and CharacterAdded events to add ESP when new players join
     game.Players.PlayerAdded:Connect(function(player)
         player.CharacterAdded:Connect(function(character)
             if character:FindFirstChild("Head") then
@@ -36,11 +40,13 @@ function esp_enable()
 end
 
 -- Function to disable ESP
-function esp_disable()
-    if not esp_enabled then return end
-    esp_enabled = false
+function esp.esp_disable()
+    -- Check if ESP is already disabled
+    if not esp.enabled then return end
+    esp.enabled = false
 
     -- Remove all ESP elements (such as BillboardGui)
+    print("ESP Disabled")
     for _, player in pairs(game.Players:GetPlayers()) do
         if player.Character and player.Character:FindFirstChild("Head") then
             local head = player.Character.Head
@@ -52,3 +58,6 @@ function esp_disable()
         end
     end
 end
+
+-- Initialize the `esp` table and return it
+return esp
