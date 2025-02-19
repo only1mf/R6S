@@ -14,8 +14,8 @@ local config = {
         s_field_of_view_range = 180,
     },
     visuals = {
-        esp_enabled = false,
-        outline_enabled = false,
+        esp_enabled = true,
+        outline_enabled = true,
     },
     gunmod = {
         fast_reload = false,
